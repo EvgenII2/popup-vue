@@ -1,5 +1,5 @@
 <template>
-  <div> Popup is working</div>
+  <div></div>
 </template>
 
 <script>
