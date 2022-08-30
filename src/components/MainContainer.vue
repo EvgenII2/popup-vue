@@ -1,8 +1,8 @@
 <template>
   <div class="main">
     <button class="button-load" @click="loadImage">Загрузить картинки</button>
-    <image-container :images="images" />
-    <popup-container />
+    <image-container :images="images" @on-image-click="setCurrentImage" />
+    <popup-container :image="currentImage" @close-popup="setCurrentImage" />
     <loader-container :isLoading="isLoading" />
   </div>
 </template>
@@ -31,6 +31,10 @@ export default {
         this.page += 1;
         this.isLoading = false;
       });
+    },
+    setCurrentImage(image) {
+      console.log(image);
+      this.currentImage = image;
     },
   },
   mounted: function () {

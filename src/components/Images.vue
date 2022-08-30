@@ -4,6 +4,7 @@
       v-for="(image, index) in images"
       :key="+image.id + index"
       :image="image"
+      @on-click="onImageClick"
     >
     </image-item>
   </div>
@@ -15,6 +16,13 @@ export default {
   name: 'ImagesList',
   props: ['images'],
   components: { ImageItem },
+  emits: ['onImageClick'],
+  methods: {
+    onImageClick(ev) {
+      console.log(ev);
+      this.$emit('onImageClick', ev);
+    },
+  },
 };
 </script>
 

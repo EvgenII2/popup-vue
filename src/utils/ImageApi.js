@@ -28,14 +28,3 @@ class ImageApi {
 }
 
 export const imageApi = new ImageApi();
-
-export const functions = {
-  getCropImage(src, size = 2) {
-    console.log(src, size);
-    const [domain, key, id, width, height] = src.split('/').splice(2);
-    const newWidth = Math.floor(+width / size);
-    const newHeight = Math.floor(+height / size);
-
-    return `https://${domain}/${key}/${id}/${newWidth}/${newHeight}`;
-  },
-};

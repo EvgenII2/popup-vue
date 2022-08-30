@@ -1,5 +1,10 @@
 <template>
-  <a href="{{image.url}}" key="{{image.id}}" class="image-card__link">
+  <a
+    v-bind:href="image.url"
+    v-bind:key="image.id"
+    class="image-card__link"
+    @click="onClick"
+  >
     <img
       class="image-card__image"
       v-bind:src="getCropImage(image.download_url, 5)"
@@ -12,6 +17,7 @@
 export default {
   name: 'ImageItem',
   props: ['image'],
+  emits: ['onClick'],
   methods: {
     getCropImage(src, size = 2) {
       const [domain, key, id, width, height] = src.split('/').splice(2);
@@ -19,6 +25,10 @@ export default {
       const newHeight = Math.floor(+height / size);
 
       return `https://${domain}/${key}/${id}/${newWidth}/${newHeight}`;
+    },
+    onClick(event) {
+      event.preventDefault();
+      this.$emit('onClick', this.image);
     },
   },
 };
