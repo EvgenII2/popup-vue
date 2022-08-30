@@ -1,24 +1,14 @@
-# popup-vue
+## Описание
 
-## Project setup
-```
-npm install
-```
+Осуществить подгрузку фотографии.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Главный экран
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Есть кнопка, по которой подгружается партия фотографий. 1 партия = 10 фотографиям.
 
-### Lints and fixes files
-```
-npm run lint
-```
+### Попап
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Каждую фотографию можно открыть в увеличенном варианте, по клику на неё открывается попап, где можно узнать кто автор. Там же есть ссылка для открытия фотографии в полном разрешении, откуда её уже можно скачать.
+Попап закрывается по нажатию на крестик.
+
+### [Ссылка](https://evgenii2.github.io/popup-vue/)
