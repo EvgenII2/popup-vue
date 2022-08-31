@@ -1,13 +1,13 @@
 <template>
   <a
-    v-bind:href="image.url"
-    v-bind:key="image.id"
+    :href="image.url"
+    :key="image.id"
     class="image-card__link"
     @click="onClick"
   >
     <img
       class="image-card__image"
-      v-bind:src="getCropImage(image.download_url, 5)"
+      :src="getCropImage(image.download_url, 5)"
       alt="{{image.author}}"
     />
   </a>

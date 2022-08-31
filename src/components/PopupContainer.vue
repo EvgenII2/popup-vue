@@ -7,8 +7,8 @@
       <figure class="popup__image-container">
         <img
           class="popup__image"
-          v-bind:src="image.download_url"
-          v-bind:alt="image.author"
+          :src="image.download_url"
+          :alt="image.author"
         />
         <figcaption class="popup__caption">
           Автор: <address class="popup__author">{{ image.author }}</address>
@@ -16,7 +16,7 @@
       </figure>
       <a
         class="popup__link popup__link_open"
-        v-bind:href="image.url"
+        :href="image.url"
         rel="noreferrer"
         target="_blank"
       >
