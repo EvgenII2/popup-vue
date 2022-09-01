@@ -1,5 +1,5 @@
 <template>
-  <div v-show="isLoading" className="loader">
+  <div v-show="isLoading" class="loader">
     <div></div>
     <div></div>
     <div></div>
